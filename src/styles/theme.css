@@ -1,0 +1,144 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Palette */
+  --champagne-gold: #C9A84C;
+  --warm-ivory: #FAF7F2;
+  --blush-rose: #F2D4CF;
+  --pastel-blue: #C9DCE8;
+  --soft-lavender: #DDD4E8;
+  --warm-charcoal: #3D3535;
+  --muted-taupe: #9B8F8A;
+  --dark-navy: #1A1A2E;
+  --ivory-dark: #EDE9E2;
+  --error: #C9564C;
+  --success: #4CAF7C;
+  --warning: #E8A44C;
+
+  /* Theme mappings */
+  --background: var(--warm-ivory);
+  --foreground: var(--warm-charcoal);
+  
+  --card: #ffffff; /* Explicit white for contrast against ivory, or match ivory if intended */
+  --card-foreground: var(--warm-charcoal);
+  
+  --popover: #ffffff;
+  --popover-foreground: var(--warm-charcoal);
+  
+  --primary: var(--dark-navy);
+  --primary-foreground: #ffffff;
+  
+  --secondary: var(--champagne-gold);
+  --secondary-foreground: #ffffff;
+  
+  --muted: var(--ivory-dark);
+  --muted-foreground: var(--muted-taupe);
+  
+  --accent: var(--champagne-gold);
+  --accent-foreground: var(--dark-navy);
+  
+  --destructive: var(--error);
+  --destructive-foreground: #ffffff;
+
+  --border: var(--ivory-dark);
+  --input: var(--ivory-dark);
+  --input-background: #ffffff;
+  
+  --ring: var(--champagne-gold);
+  
+  --radius: 0.1875rem; /* 3px for buttons/inputs */
+  --radius-lg: 2rem; /* 32px for cards */
+  --radius-xl: 3rem;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Dancing Script", cursive;
+}
+
+.dark {
+  /* Minimal dark mode support mapped to same palette or inverted if needed, keeping light theme for now as requested */
+  --background: var(--dark-navy);
+  --foreground: var(--warm-ivory);
+  --card: var(--warm-charcoal);
+  --card-foreground: var(--warm-ivory);
+  --border: var(--warm-charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-champagne: var(--champagne-gold);
+  --color-ivory: var(--warm-ivory);
+  --color-rose: var(--blush-rose);
+  --color-blue: var(--pastel-blue);
+  --color-lavender: var(--soft-lavender);
+  --color-charcoal: var(--warm-charcoal);
+  --color-taupe: var(--muted-taupe);
+  --color-navy: var(--dark-navy);
+  
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-script: var(--font-script);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-charcoal;
+  }
+  
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.4;
+  }
+}
