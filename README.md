@@ -1,7 +1,7 @@
 
-  # P4 VowTrack HIFI
+  # VowTrack
 
-  This is a code bundle for P4 VowTrack HIFI. The original project is available at https://www.figma.com/design/LbJA5v93meEz6pbNBqvnos/P4-VowTrack-HIFI.
+  This is a code bundle for VowTrack. The original project is available at https://www.figma.com/design/LbJA5v93meEz6pbNBqvnos/VowTrack.
 
   ## Running the code
 
