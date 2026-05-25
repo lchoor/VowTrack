@@ -36,4 +36,5 @@ ADRs exist so we can **decide fast and not relitigate**. Each one captures a sin
 ## Companion planning docs
 
 - [`../PRODUCTION_ROADMAP.md`](../PRODUCTION_ROADMAP.md) — phased plan from prototype to launch.
+- [`../BUILD_SEQUENCE.md`](../BUILD_SEQUENCE.md) — dependency-ordered, demoable build milestones (M0–M8).
 - [`../GTM_PLAN.md`](../GTM_PLAN.md) — go-to-market, landing page, and launch plan.
